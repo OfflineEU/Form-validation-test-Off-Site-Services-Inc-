@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OSS Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css"/>
+  <style>
+    label {
+      width: 100px;
+    }
+
+    label.error {
+      color: red;
+    }
+
+    input {
+      border: 1px solid #ccc;
+    }
+
+    input.error {
+      border-color: red;
+    }
+
+    .content {
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .validation span {
+      font-size: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="content">
+        <form onsubmit="myForm(event)" id="testForm">
+          <div>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName"/>
+            <div class="validation">
+              <span></span>
+            </div>
+          </div>
+
+          <div>
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName"/>
+            <div class="validation">
+              <span></span>
+            </div>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email"/>
+            <div class="validation">
+              <span></span>
+            </div>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
