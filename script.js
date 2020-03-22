@@ -35,7 +35,7 @@ function myForm(event) {
   checkFirstName();
   checkLastName();
   checkEmail();
-  if (firstNameMessages.length > 0 || firstNameMessages.length > 0 || emailMessages.length > 0) {
+  if (firstNameMessages.length > 0 || lastNameMessages.length > 0 || emailMessages.length > 0) {
     firstNameMessages = [];
     lastNameMessages = [];
     emailMessages = [];
@@ -63,7 +63,7 @@ function checkFirstName() {
 }
 
 function checkLastName() {
-  if (lastName.value === '' || firstName.value == null) {
+  if (lastName.value === '' || lastName.value == null) {
     lastNameMessages.push('Last name is required');
   } else if (lastName.value.length <= 2) {
     lastNameMessages.push('Last name must be longer than 3 characters');
@@ -119,5 +119,6 @@ function setValidation(input) {
         email.classList.remove('error');
         emailLabelElement.classList.remove('error');
       }
+      break;
   }
 }
